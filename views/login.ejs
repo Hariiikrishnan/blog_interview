@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form method="POST" action="/login">
+
+        <label>username</label>
+        <input name="username" />
+        <label>Password</label>
+        <input name="password" />
+        
+        <button type="submit">Submit</button>
+    </form>
+
+
+        <script>
+            console.log('<%=msg%>');
+            if('<%= msg %>' === "logged"){
+
+                localStorage.setItem('token', <%- JSON.stringify(token) %>)
+                console.log("logged");
+                var token = 
+                localStorage.getItem('token')  ;
+                setTimeout(()=>{
+                    window.location.href="/"
+                },500);
+            }
+      </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<form action="/update/<%= data.b_id %>" method="POST">
+
+    <label>Title</label>
+    <input name="title" value="<%= data.title %>" />
+    <label>Content</label>
+    <input name="content"  value="<%= data.content %>" />
+    
+    <button type="" onclick="callUpdateApi()">Submit</button>
+</form>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+    
+    
+    
+    
+    <script>
+        
+
+        
+        var token = 
+         localStorage.getItem('token')  ;
+        //  console.log(token);
+        
+        console.log(document.getElementsByName("title")[0].value);
+        console.log(document.getElementsByName("content")[0].value);
+        
+        
+const config = {
+   headers: {
+     "Content-Type": "application/json",
+     Authorization: "Bearer " + token,
+   },
+ };
+//   function callUpdateApi(){
+//         var body = {
+//             title:document.getElementsByName("title")[0].value,
+//             content:document.getElementsByName("content")[0].value
+//           }
+//           // console.log(document.getElementsByName("content")[0].value);
+//           console.log(body);
+          
+//           axios.post(`http://localhost:3000/update/<%= data.b_id %>`,config,body).then((res)=>{
+//               console.log(res);
+//             if(res.status===200){
+//                 // window.location.href="/";
+//             }
+//         }).catch((err)=>{
+//             console.log(err);
+//         })
+//     }
+        </script>
+        </body>
+        </html>

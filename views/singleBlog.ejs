@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box d-flex">
+        <a href="/updateBlog/<%= data.b_id %>"> Update </a>
+        <h3>Blog Title : <%= data.title %></h3> 
+        <h3>Blog Content: <%= data.content %></h3>
+        
+        <br>
+        <form action="/deleteBlog/<%= data.b_id %>" method="POST"> 
+            <button type="submit">
+                Delete 
+
+            </button>
+        </form>
+        
+    </div>
+</body>
+</html>

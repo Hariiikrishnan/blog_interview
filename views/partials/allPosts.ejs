@@ -1,0 +1,17 @@
+
+    
+    
+    <% for( let i = 0; i < data.length; i++ ) { %>
+                    
+      
+            <div class="box d-flex">
+                <a href="/blog/<%= data[i].b_id %>">   <h3>Blog Title : <%= data[i].title %></h3>   </a>
+                <h3>Blog Content: <%= data[i].content %></h3>
+                
+                <br>
+                
+            </div>
+
+      
+    <% } %>
+
